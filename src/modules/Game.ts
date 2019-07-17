@@ -1,8 +1,9 @@
+import shuffle from 'lodash/shuffle'
+
 import { Player } from "./Player";
 import { Field } from "./Field";
 import { Technology } from "./defs";
 import { MilitaryField } from "./MilitaryField";
-import { shuffle } from 'lodash'
 import { Wonder } from "./Wonder";
 import { Card } from "./Card";
 

@@ -2,7 +2,7 @@ import { DEFAULT_START_MONEY, Technology, MONEY_FOR_EACH_VP, TECHNOLOGIES_MULTIP
 import { Wonder } from "./Wonder";
 import { CardCollection } from "./CardCollection";
 
-import {uniq} from 'lodash'
+import uniq from 'lodash/uniq'
 import { GreenCard } from "./Card";
 
 export class Player {
