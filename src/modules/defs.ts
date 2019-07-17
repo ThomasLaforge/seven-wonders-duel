@@ -33,9 +33,16 @@ export enum CardType {
 }
 
 export enum Technology {
-    SevenPoints,
-    TechnologiesMultiplicator,
-    ScienceBadge
+    SevenPoints = 0,
+    TechnologiesMultiplicator = 1,
+    ScienceBadge = 2
+}
+
+export enum Power {
+    PlayAgain = 0,
+    ChoseOneScienceFromThreeInBank = 1,
+    GetCardFromDiscard = 2,
+    GetCardVisibleButNotAccessible = 3
 }
 
 export interface Cost {
@@ -44,9 +51,13 @@ export interface Cost {
 }
 export interface Reward {
     money?: number,
+    discardMoney?: number,
+    discardRareResource?: boolean,
+    discardBaseResource?: boolean,
     military?: number,
     victoryPoints?: number,
     resources?: Resource[],
     discount?: Resource[],
-    technology?: Technology
+    technology?: Technology,
+    powers?: Power
 }

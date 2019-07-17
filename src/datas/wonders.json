@@ -1,0 +1,136 @@
+[
+    {
+        "name": "la via appia",
+        "cost": {
+            "resources": [3,1,1,0,0]
+        },
+        "reward": {
+            "money": 3,
+            "discardMoney": 3,
+            "powers": [0],
+            "victoryPoints": 3
+        }
+    },
+    {
+        "name": "la statue de zeus",
+        "cost": {
+            "resources": [3,3,1,2,0]
+        },
+        "reward": {
+            "discardBaseResource": true,
+
+        }
+    },
+    {
+        "name": "les jardins suspendus",
+        "cost": {
+            "resources": [3,4,2,2]
+        },
+        "reward": {
+            "money": 6,
+            "powers": [0],
+            "victoryPoints": 3
+        }
+    },
+    {
+        "name": "le piree",
+        "cost": {
+            "resources": [1,0,2,2]
+        },
+        "reward": {
+            "resources": [3,4],
+            "powers": [0],
+            "victoryPoints": 2
+        }
+    },
+    {
+        "name": "le sphynx",
+        "cost": {
+            "resources": [4,4,1,0]
+        },
+        "reward": {
+            "powers": [0],
+            "victoryPoints": 6
+        }
+    },
+    {
+        "name": "le circuit maximus",
+        "cost": {
+            "resources": [4,2,0,0]
+        },
+        "reward": {
+            "discardRareResource": true,
+            "military": 1,
+            "victoryPoints": 3
+        }
+    },
+    {
+        "name": "le colosse",
+        "cost": {
+            "resources": [4,1,1,1]
+        },
+        "reward": {
+            "military": 2,
+            "victoryPoints": 3
+        }
+    },
+    {
+        "name": "le grand phare",
+        "cost": {
+            "resources": [3,3,0,2]
+        },
+        "reward": {
+            "resources": [2,0,1],
+            "victoryPoints": 4
+        }
+    },
+    {
+        "name": "la grande bibliotheque",
+        "cost": {
+            "resources": [3,4,2,2,2]
+        },
+        "reward": {
+            "powers": [1],
+            "victoryPoints": 4
+        }
+    },
+    {
+        "name": "les pyramides",
+        "cost": {
+            "resources": [3,0,0,0]
+        },
+        "reward": {
+            "victoryPoints": 9
+        }
+    },
+    {
+        "name": "le temple d'artemis",
+        "cost": {
+            "resources": [3,4,0,2]
+        },
+        "reward": {
+            "powers": [0],
+            "money": 12
+        }
+    },
+    {
+        "name": "le mausolee",
+        "cost": {
+            "resources": [3,4,4,1,1]
+        },
+        "reward": {
+            "powers": [2],
+            "victoryPoints": 2
+        }
+    },
+    {
+        "name": "messe",
+        "cost": {
+            "resources": [4,3,2,1,1]
+        },
+        "reward": {
+            "powers": [3],
+            "victoryPoints": 2
+        }
+    }
+]
