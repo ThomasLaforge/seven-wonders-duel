@@ -12,6 +12,31 @@ export abstract class Card {
 
 }
 
+export class CardFactory {
+
+    static create(type: CardType, cJson: any){
+      if(type === CardType.Blue) {
+        return new BlueCard(cJson.name, cJson.cost, cJson.reward, cJson.link);
+      } 
+      else if(type === CardType.Green) {
+        return new GreenCard(cJson.name, cJson.cost, cJson.reward, cJson.link);
+      } 
+      else if(type === CardType.Red) {
+        return new RedCard(cJson.name, cJson.cost, cJson.reward, cJson.link);
+      } 
+      else if(type === CardType.Resource) {
+        return new BlueCard(cJson.name, cJson.cost, cJson.reward, cJson.link);
+      } 
+      else if(type === CardType.Yellow) {
+        return new BlueCard(cJson.name, cJson.cost, cJson.reward, cJson.link);
+      } 
+      else if(type === CardType.Purple) {
+        return new BlueCard(cJson.name, cJson.cost, cJson.reward, cJson.link);
+      }
+      throw Error("impossible to create Card of type : " + type);
+    }
+}
+
 export class BlueCard extends Card {
 
     constructor(
@@ -78,7 +103,12 @@ export class ResourceCard extends Card {
 
     isPremium(){
         const advancedResource: Resource[] = [AdvancedResource.Elixir, AdvancedResource.Papyrus]
-        return advancedResource.includes(this.reward.resources[0])
+        if(this.reward.resources && this.reward.resources.length > 0){
+            return advancedResource.includes(this.reward.resources[0])
+        }
+        else {
+            throw "no resource on reward";
+        }
     }
 
 }
