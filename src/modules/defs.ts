@@ -9,6 +9,7 @@ export const FIRST_MILITARY_STEP = 3
 export const SECOND_MILITARY_STEP = 6
 export const MAX_ATTACK = 9
 export const NB_SCIENCE_BADGES = 7
+export const NB_TECHNOLOGIES = 9
 
 export enum BasicResource {
     Stone = 0,
