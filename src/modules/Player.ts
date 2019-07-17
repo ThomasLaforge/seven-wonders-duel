@@ -57,7 +57,15 @@ export class Player {
     }
 
     hasAllScienceBadges(){
-        const cardBadges = this.cards.getCardsByType(CardType.Green).reduce( (all: Technology[], c: GreenCard) => all.concat(c.reward.technology), []) 
+        const cardBadges = this.cards.getCardsByType(CardType.Green)
+            .reduce( (all: Technology[], c: GreenCard) => {
+                if(c.reward.technology || c.reward.technology === 0){
+                    return all.concat(c.reward.technology)
+                }
+                else {
+                    throw "card without reward technology";
+                }
+            }, []) 
         const uniqBadges = uniq(cardBadges)
         let nbDifferentBadges = uniqBadges.length
         

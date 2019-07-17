@@ -1,14 +1,22 @@
 import { CardType, Cost, Reward, AdvancedResource, Resource } from "./defs";
 
-export abstract class Card {
+export abstract class SevenWonderCard {
+    constructor(
+        public name: string,
+        public cost: Cost
+    ){}
+}
+
+export abstract class Card extends SevenWonderCard {
     
     constructor(
+        name: string,
+        cost: Cost,
         public type: CardType,
-        public name: string,
-        public cost: Cost,
-        public reward: Reward,
         public link?: Card
-    ){}
+    ){
+        super(name, cost)
+    }
 
 }
 

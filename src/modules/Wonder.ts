@@ -1,14 +1,16 @@
 import { Cost, Reward } from "./defs";
-import { Card } from "./Card";
+import { Card, SevenWonderCard } from "./Card";
 
-export class Wonder {
+export class Wonder extends SevenWonderCard {
     
     constructor(
-        public name: string,
-        public cost: Cost,
+        name: string,
+        cost: Cost,
         public reward: Reward,
         public buildCard?: Card
-    ){}
+    ){
+        super(name, cost)
+    }
 
     build(buildCard: Card){
         this.buildCard = buildCard
