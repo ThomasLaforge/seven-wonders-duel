@@ -1,1 +1,691 @@
-[]
+[
+    {
+        "age": 1,
+        "types": [
+            {
+                "type": 0,
+                "cards": [
+                    {
+                        "name": "depot de pierre",
+                        "cost": {
+                            "money": 3
+                        },
+                        "reward": {
+                            "discount": [0]
+                        }
+                    },
+                    {
+                        "name": "depot d'argile",
+                        "cost": {
+                            "money": 3
+                        },
+                        "reward": {
+                            "discount": [1]
+                        }
+                    },
+                    {
+                        "name": "depot de bois",
+                        "cost": {
+                            "money": 3
+                        },
+                        "reward": {
+                            "discount": [2]
+                        }
+                    },
+                    {
+                        "name": "taverne",
+                        "reward": {
+                            "money": 4
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 1,
+                "cards": [
+                    {
+                        "name": "theatre",
+                        "reward": {
+                            "victoryPoints": 3
+                        }
+                    },
+                    {
+                        "name": "autel",
+                        "reward": {
+                            "victoryPoints": 3
+                        }
+                    },
+                    {
+                        "name": "bains",
+                        "cost": {
+                            "resources": [0]
+                        },
+                        "reward": {
+                            "victoryPoints": 3
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 2,
+                "cards": [
+                    {
+                        "name": "atelier",
+                        "cost": {
+                            "resources": [3]
+                        },
+                        "reward": {
+                            "victoryPoints": 1,
+                            "scienceBadge": 4
+                        }
+                    },
+                    {
+                        "name": "apothicaire",
+                        "cost": {
+                            "resources": [4]
+                        },
+                        "reward": {
+                            "victoryPoints": 1,
+                            "scienceBadge": 1
+                        }
+                    },
+                    {
+                        "name": "scriptorium",
+                        "cost": {
+                            "money": 2
+                        },
+                        "reward": {
+                            "scienceBadge": 5
+                        }
+                    },
+                    {
+                        "name": "officine",
+                        "cost": {
+                            "money": 2
+                        },
+                        "reward": {
+                            "scienceBadge": 3
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 3,
+                "cards": [
+                    {
+                        "name": "tour de garde",
+                        "reward": {
+                            "military": 1
+                        }
+                    },
+                    {
+                        "name": "ecuries",
+                        "cost": {
+                            "resources": [2]
+                        },
+                        "reward": {
+                            "military": 1
+                        }
+                    },
+                    {
+                        "name": "caserne",
+                        "cost": {
+                            "resources": [1]
+                        },
+                        "reward": {
+                            "military": 1
+                        }
+                    },
+                    {
+                        "name": "palissade",
+                        "cost": {
+                            "money": 2
+                        },
+                        "reward": {
+                            "military": 1
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 5,
+                "cards": [
+                    {
+                        "name": "chantier",
+                        "reward": {
+                            "resources": [2]
+                        }
+                    },
+                    {
+                        "name": "exploitation",
+                        "cost": {
+                            "money": 1
+                        },
+                        "reward": {
+                            "resources": [2]
+                        }
+                    },
+                    {
+                        "name": "bassin argileux",
+                        "reward": {
+                            "resources": [1]
+                        }
+                    },
+                    {
+                        "name": "cavite",
+                        "cost": {
+                            "money": 1
+                        },
+                        "reward": {
+                            "resources": [1]
+                        }
+                    },
+                    {
+                        "name": "gisement",
+                        "reward": {
+                            "resources": [0]
+                        }
+                    },
+                    {
+                        "name": "mine",
+                        "cost": {
+                            "money": 1
+                        },
+                        "reward": {
+                            "resources": [0]
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "cards": [
+                    {
+                        "name": "verrerie",
+                        "cost": {
+                            "money": 1
+                        },
+                        "reward": {
+                            "resources": [4]
+                        }
+                    },
+                    {
+                        "name": "presse",
+                        "cost": {
+                            "money": 1
+                        },
+                        "reward": {
+                            "resources": [3]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "age": 2,
+        "types": [
+            {
+                "type": 0,
+                "cards": [
+                    {
+                        "name": "forum",
+                        "cost": {
+                            "money": 3,
+                            "resources": [1]
+                        },
+                        "reward": {
+                            "resources": [4,3]
+                        }
+                    },
+                    {
+                        "name": "caravanserail",
+                        "cost": {
+                            "money": 2,
+                            "resources": [4,3]
+                        },
+                        "reward": {
+                            "resources": [2,1,0]
+                        }
+                    },
+                    {
+                        "name": "douanes",
+                        "cost": {
+                            "money": 4
+                        },
+                        "reward": {
+                            "discount": [3,4]
+                        }
+                    },
+                    {
+                        "name": "brasserie",
+                        "reward": {
+                            "money": 6
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 1,
+                "cards": [
+                    {
+                        "name": "tribunal",
+                        "cost": {
+                            "resources": [2,2,4]
+                        },
+                        "reward": {
+                            "victoryPoints": 5
+                        }
+                    },
+                    {
+                        "name": "statue",
+                        "cost": {
+                            "resources": [1,1]
+                        },
+                        "reward": {
+                            "victoryPoints": 4
+                        }
+                    },
+                    {
+                        "name": "temple",
+                        "cost": {
+                            "resources": [2,3]
+                        },
+                        "reward": {
+                            "victoryPoints": 4
+                        }
+                    },
+                    {
+                        "name": "aqueduc",
+                        "cost": {
+                            "resources": [0,0,0]
+                        },
+                        "reward": {
+                            "victoryPoints": 5
+                        }
+                    },
+                    {
+                        "name": "rostres",
+                        "cost": {
+                            "resources": [0,2]
+                        },
+                        "reward": {
+                            "victoryPoints": 4
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 2,
+                "cards": [
+                    {
+                        "name": "bibliotheque",
+                        "cost": {
+                            "resources": [0,2,4]
+                        },
+                        "reward": {
+                            "scienceBadge": 5,
+                            "victoryPoints": 2 
+                        }
+                    },
+                    {
+                        "name": "dispensaire",
+                        "cost": {
+                            "resources": [1,1,0]
+                        },
+                        "reward": {
+                            "scienceBadge": 3,
+                            "victoryPoints": 2 
+                        }
+                    },{
+                        "name": "ecole",
+                        "cost": {
+                            "resources": [2,3,3]
+                        },
+                        "reward": {
+                            "scienceBadge": 1,
+                            "victoryPoints": 1
+                        }
+                    },{
+                        "name": "laboratoire",
+                        "cost": {
+                            "resources": [2,4,4]
+                        },
+                        "reward": {
+                            "scienceBadge": 4,
+                            "victoryPoints": 1
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 3,
+                "cards": [
+                    {
+                        "name": "muraille",
+                        "cost": {
+                            "resources": [0,0]
+                        },
+                        "reward": {
+                            "military": 2
+                        }
+                    },
+                    {
+                        "name": "haras",
+                        "cost": {
+                            "resources": [1,2]
+                        },
+                        "reward": {
+                            "military": 1
+                        }
+                    },
+                    {
+                        "name": "baraquements",
+                        "cost": {
+                            "money":3
+                        },
+                        "reward": {
+                            "military": 1
+                        }
+                    },
+                    {
+                        "name": "champ de tir",
+                        "cost": {
+                            "resources": [0,2,3]
+                        },
+                        "reward": {
+                            "military": 2
+                        }
+                    },
+                    {
+                        "name": "place d'armes",
+                        "cost": {
+                            "resources": [1,1,4]
+                        },
+                        "reward": {
+                            "military": 2
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 5,
+                "cards": [
+                    {
+                        "name": "scierie",
+                        "cost": {
+                            "money": 2
+                        },
+                        "reward": {
+                            "resources": [2,2]
+                        }
+                    },
+                    {
+                        "name": "briqueterie",
+                        "cost": {
+                            "money": 2
+                        },
+                        "reward": {
+                            "resources": [1,1]
+                        }
+                    },
+                    {
+                        "name": "carriere",
+                        "cost": {
+                            "money": 2
+                        },
+                        "reward": {
+                            "resources": [0,0]
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 6,
+                "cards": [
+                    {
+                        "name": "soufflerie",
+                        "reward": {
+                            "resources": [4]
+                        }
+                    },
+                    {
+                        "name": "sechoir",
+                        "reward": {
+                            "resources": [3]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "age": 3,
+        "types": [
+            {
+                "type": 0,
+                "cards": [
+                    {
+                        "name": "chambre de commerce",
+                        "cost": {
+                            "resources": [3,3]
+                        },
+                        "reward": {
+                            "goldBy": {
+                                "amount": 3,
+                                "type": 6
+                            },
+                            "victoryPoints": 3
+                        }
+                    },
+                    {
+                        "name": "port",
+                        "cost": {
+                            "resources": [2,4,3]
+                        },
+                        "reward": {
+                            "goldBy": {
+                                "amount": 2,
+                                "type": 5
+                            },
+                            "victoryPoints": 3
+                        }
+                    },
+                    {
+                        "name": "armurerie",
+                        "cost": {
+                            "resources": [0,0,4]
+                        },
+                        "reward": {
+                            "goldBy": {
+                                "amount": 1,
+                                "type": 3
+                            },
+                            "victoryPoints": 3
+                        }
+                    },
+                    {
+                        "name": "phare",
+                        "cost": {
+                            "resources": [1,1,4]
+                        },
+                        "reward": {
+                            "goldBy": {
+                                "amount": 1,
+                                "type": 0
+                            },
+                            "victoryPoints": 3
+                        }
+                    },
+                    {
+                        "name": "arene",
+                        "cost": {
+                            "resources": [1,0,2]
+                        },
+                        "reward": {
+                            "goldBy": {
+                                "amount": 2,
+                                "type": 7
+                            },
+                            "victoryPoints": 3
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 1,
+                "cards": [
+                    {
+                        "name": "palace",
+                        "cost": {
+                            "resources": [1,0,2,4,4]
+                        },
+                        "reward": {
+                            "victoryPoints": 7
+                        }
+                    },
+                    {
+                        "name": "hotel de ville",
+                        "cost": {
+                            "resources": [0,0,0,2,2]
+                        },
+                        "reward": {
+                            "victoryPoints": 7
+                        }
+                    },
+                    {
+                        "name": "obelisque",
+                        "cost": {
+                            "resources": [0,0,4]
+                        },
+                        "reward": {
+                            "victoryPoints": 5
+                        }
+                    },
+                    {
+                        "name": "jardins",
+                        "cost": {
+                            "resources": [1,1,2,2]
+                        },
+                        "reward": {
+                            "victoryPoints": 6
+                        }
+                    },
+                    {
+                        "name": "pantheon",
+                        "cost": {
+                            "resources": [1,2,3,3]
+                        },
+                        "reward": {
+                            "victoryPoints": 6
+                        }
+                    },
+                    {
+                        "name": "senat",
+                        "cost": {
+                            "resources": [1,1,0,3]
+                        },
+                        "reward": {
+                            "victoryPoints": 5
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 2,
+                "cards": [
+                    {
+                        "name": "academie",
+                        "cost": {
+                            "resources": [0,2,4,4]
+                        },
+                        "reward": {
+                            "scienceBadge": 2,
+                            "victoryPoints": 3
+                        }
+                    },
+                    {
+                        "name": "etude",
+                        "cost": {
+                            "resources": [2,2,4,3]
+                        },
+                        "reward": {
+                            "scienceBadge": 2,
+                            "victoryPoints": 3
+                        }
+                    },
+                    {
+                        "name": "universite",
+                        "cost": {
+                            "resources": [1,4,3]
+                        },
+                        "reward": {
+                            "scienceBadge": 0,
+                            "victoryPoints": 2
+                        }
+                    },
+                    {
+                        "name": "observatoire",
+                        "cost": {
+                            "resources": [0,3,3]
+                        },
+                        "reward": {
+                            "scienceBadge": 0,
+                            "victoryPoints": 2
+                        }
+                    }
+                ]
+            },
+            {
+                "type": 3,
+                "cards": [
+                    {
+                        "name": "arsenal",
+                        "cost": {
+                            "resources": [1,1,1,2,2]
+                        },
+                        "reward": {
+                            "military": 3
+                        }
+                    },
+                    {
+                        "name": "pretoire",
+                        "cost": {
+                            "money": 8
+                        },
+                        "reward": {
+                            "military": 3
+                        }
+                    },
+                    {
+                        "name": "fortifications",
+                        "cost": {
+                            "resources": [0,0,1,3]
+                        },
+                        "reward": {
+                            "military": 2
+                        }
+                    },
+                    {
+                        "name": "atelier de siege",
+                        "cost": {
+                            "resources": [2,2,2,4]
+                        },
+                        "reward": {
+                            "military": 2
+                        }
+                    },
+                    {
+                        "name": "cirque",
+                        "cost": {
+                            "resources": [1,1,0,0]
+                        },
+                        "reward": {
+                            "military": 2
+                        }
+                    } 
+                ]
+            }
+        ]
+    }
+]
