@@ -1,0 +1,86 @@
+[
+    {
+        "age": 1,
+        "lines": [
+            {
+                "discovered": true,
+                "nbCards": 2
+            },
+            {
+                "discovered": false,
+                "nbCards": 3
+            },
+            {
+                "discovered": true,
+                "nbCards": 4
+            },
+            {
+                "discovered": false,
+                "nbCards": 5
+            },
+            {
+                "discovered": true,
+                "nbCards": 6
+            }
+        ]
+    },
+    {
+        "age": 2,
+        "lines": [
+            {
+                "discovered": true,
+                "nbCards": 6
+            },
+            {
+                "discovered": false,
+                "nbCards": 5
+            },
+            {
+                "discovered": true,
+                "nbCards": 4
+            },
+            {
+                "discovered": false,
+                "nbCards": 3
+            },
+            {
+                "discovered": true,
+                "nbCards": 2
+            }
+        ]
+    },
+    {
+        "age": 3,
+        "lines": [
+            {
+                "discovered": true,
+                "nbCards": 2
+            },
+            {
+                "discovered": false,
+                "nbCards": 3
+            },
+            {
+                "discovered": true,
+                "nbCards": 4
+            },
+            {
+                "discovered": false,
+                "nbCards": 2,
+                "space": 1
+            },
+            {
+                "discovered": true,
+                "nbCards": 4
+            },
+            {
+                "discovered": false,
+                "nbCards": 3
+            },
+            {
+                "discovered": true,
+                "nbCards": 2
+            }
+        ]
+    }
+]
