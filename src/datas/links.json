@@ -1,0 +1,87 @@
+[
+    {
+        "symbol": "fer",
+        "paidCardName": "ecuries",
+        "freeCardName": "haras"
+    },
+    {
+        "symbol": "dague",
+        "paidCardName": "caserne",
+        "freeCardName": "baraquements"
+    },
+    {
+        "symbol": "castle",
+        "paidCardName": "palissade",
+        "freeCardName": "fortifications"
+    },
+    {
+        "symbol": "cible",
+        "paidCardName": "champ de tir",
+        "freeCardName": "atelier de siege"
+    },
+    {
+        "symbol": "casque",
+        "paidCardName": "place d'armes",
+        "freeCardName": "cirque"
+    },
+    {
+        "symbol": "book",
+        "paidCardName": "scriptorium",
+        "freeCardName": "bibliotheque"
+    },
+    {
+        "symbol": "wheel",
+        "paidCardName": "officine",
+        "freeCardName": "dispensaire"
+    },
+    {
+        "symbol": "harpe",
+        "paidCardName": "ecole",
+        "freeCardName": "universite"
+    },
+    {
+        "symbol": "alladdinLamp",
+        "paidCardName": "laboratoire",
+        "freeCardName": "observatoire"
+    },
+    {
+        "symbol": "mask",
+        "paidCardName": "theatre",
+        "freeCardName": "statue"
+    },
+    {
+        "symbol": "collumn",
+        "paidCardName": "statue",
+        "freeCardName": "jardins"
+    },
+    {
+        "symbol": "moon",
+        "paidCardName": "autel",
+        "freeCardName": "temple"
+    },
+    {
+        "symbol": "sun",
+        "paidCardName": "temple",
+        "freeCardName": "pantheon"
+    },
+    {
+        "symbol": "water",
+        "paidCardName": "bains",
+        "freeCardName": "aqueduc"
+    },
+    {
+        "symbol": "minister",
+        "paidCardName": "rostres",
+        "freeCardName": "senat"
+    },
+    {
+        "symbol": "amphore",
+        "paidCardName": "taverne",
+        "freeCardName": "phare"
+    },
+    {
+        "symbol": "barel",
+        "paidCardName": "brasserie",
+        "freeCardName": "arene"
+    }
+]
