@@ -20,7 +20,7 @@ export enum BasicResource {
 
 export enum AdvancedResource {
     Papyrus = 3,
-    Elixir = 4
+    Glass = 4
 }
 
 export type Resource = BasicResource | AdvancedResource
@@ -31,13 +31,29 @@ export enum CardType {
     Green = 2, // Science
     Red = 3, // Armées
     Purple = 4, // Guildes
-    Resource = 5,  // Ressources
+    Resource = 5,  // Ressources,
+    RareResource = 6
 }
+
+export enum OthersConstructionType {
+    Wonder = 7
+}
+
+export type ConstructionType = CardType | OthersConstructionType
 
 export enum Technology {
     SevenPoints = 0,
     TechnologiesMultiplicator = 1,
-    ScienceBadge = 2
+    TakeTechnologyInReserve = 2
+}
+
+export enum ScienceBadge {
+    Globe = 0,
+    Wheel = 1,
+    SunHour = 2,
+    Cooking = 3,
+    Geometry = 4,
+    Write = 5
 }
 
 export enum Power {
@@ -60,6 +76,13 @@ export interface Reward {
     victoryPoints?: number,
     resources?: Resource[],
     discount?: Resource[],
-    technology?: Technology,
-    powers?: Power
+    scienceBadge?: ScienceBadge,
+    powers?: Power,
+    goldBy?: { amount: number, type: ConstructionType },
+}
+
+export interface GuildReward {
+    VpByMostWonders?: number,
+    VpByMostGold?: { amount: number, each: number},
+    goldAndVpByMost?: { amount: number, types: ConstructionType[] }
 }
