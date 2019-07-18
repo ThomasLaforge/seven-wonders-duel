@@ -1,4 +1,4 @@
-import { Card } from "./Card";
+import { PlayableCard } from "./Card";
 
 export interface Position {
     col: number,
@@ -7,7 +7,7 @@ export interface Position {
 
 export class FieldCard {
     constructor(
-        public card: Card,
+        public card: PlayableCard,
         public visible: boolean,
         public position: Position
     ){}

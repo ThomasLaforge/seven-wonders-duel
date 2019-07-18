@@ -1,21 +1,24 @@
 import { CardType, Cost, Reward, AdvancedResource, Resource } from "./defs";
 
-export abstract class SevenWonderCard {
+export abstract class SevenWonderCard<TReward> {
     constructor(
         public name: string,
-        public cost: Cost
+        public cost: Cost,
+        public reward: TReward
     ){}
 }
 
-export abstract class Card extends SevenWonderCard {
+export abstract class PlayableCard<TReward> extends SevenWonderCard<TReward> {
     
     constructor(
         name: string,
         cost: Cost,
+        reward: TReward,
+        public age: number,
         public type: CardType,
-        public link?: Card
+        public link?: PlayableCard<Reward>
     ){
-        super(name, cost)
+        super(name, cost, reward)
     }
 
 }
@@ -45,15 +48,16 @@ export class CardFactory {
     }
 }
 
-export class BlueCard extends Card {
+export class BlueCard extends PlayableCard {
 
     constructor(
         name: string,
+        age: number,
         cost: Cost,
-        reward: Reward,
-        link?: Card
+        public reward: Reward,
+        link?: PlayableCard
     ){
-        super(CardType.Blue, name, cost, reward, link)
+        super(name, cost, age, CardType.Blue, link)
     }
 
     get victoryPoints(){
@@ -65,13 +69,13 @@ export class BlueCard extends Card {
 
 }
 
-export class RedCard extends Card {
+export class RedCard extends PlayableCard {
 
     constructor(
         name: string,
         cost: Cost,
         reward: Reward,
-        link?: Card
+        link?: PlayableCard
     ){
         super(CardType.Red, name, cost, reward, link)
     }
@@ -85,26 +89,26 @@ export class RedCard extends Card {
 
 }
 
-export class GreenCard extends Card {
+export class GreenCard extends PlayableCard {
 
     constructor(
         name: string,
         cost: Cost,
         reward: Reward,
-        link?: Card
+        link?: PlayableCard
     ){
         super(CardType.Red, name, cost, reward, link)
     }
 
 }
 
-export class ResourceCard extends Card {
+export class ResourceCard extends PlayableCard {
 
     constructor(
         name: string,
         cost: Cost,
         reward: Reward,
-        link?: Card
+        link?: PlayableCard
     ){
         super(CardType.Resource, name, cost, reward, link)
     }
@@ -119,4 +123,15 @@ export class ResourceCard extends Card {
         }
     }
 
+}
+
+export class GuildCard extends PlayableCard {
+    
+    constructor(
+        name: string,
+        cost: Cost
+
+    ){
+        super('guilde des ' + name, cost, CardType.Purple)
+    }
 }

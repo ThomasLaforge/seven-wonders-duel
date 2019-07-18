@@ -2,10 +2,10 @@ import shuffle from 'lodash/shuffle'
 
 import { Player } from "./Player";
 import { Field } from "./Field";
-import { Technology } from "./defs";
+import { Technology, CardType } from "./defs";
 import { MilitaryField } from "./MilitaryField";
 import { Wonder } from "./Wonder";
-import { Card } from "./Card";
+import { PlayableCard } from "./Card";
 
 export class Game {
 
@@ -14,6 +14,7 @@ export class Game {
         public fields: Field[],
         public technologiesStock: Technology[],
         public militaryField = new MilitaryField(players),
+        public discard: PlayableCard[] = [],
         shufflePlayers = true
     ){
         shufflePlayers && this.shufflePlayers()
@@ -94,8 +95,16 @@ export class Game {
         this.militaryField.checkPenalties()
     }
 
-    playCard(c: Card, p: Player){
+    playCard(c: PlayableCard, p: Player){
         this.militaryField.checkPenalties()
+    }
+
+    // TODO
+    discardCard(c: PlayableCard, :p: Player){
+        this.discard.push(c)
+        // this.currentField.removeCard(c)
+        const nbMoneyToWin = 2 + p.cards.getCardsByType(CardType.Yellow).length
+        p.earn(nbMoneyToWin)
     }
 
     /**

@@ -1,5 +1,5 @@
 import { Cost, Reward } from "./defs";
-import { Card, SevenWonderCard } from "./Card";
+import { PlayableCard, SevenWonderCard } from "./Card";
 
 export class Wonder extends SevenWonderCard {
     
@@ -7,12 +7,12 @@ export class Wonder extends SevenWonderCard {
         name: string,
         cost: Cost,
         public reward: Reward,
-        public buildCard?: Card
+        public buildCard?: PlayableCard
     ){
         super(name, cost)
     }
 
-    build(buildCard: Card){
+    build(buildCard: PlayableCard){
         this.buildCard = buildCard
     }
 

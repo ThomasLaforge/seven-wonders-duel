@@ -1,10 +1,10 @@
-import { Card, BlueCard, RedCard } from "./Card";
+import { PlayableCard, BlueCard, RedCard } from "./Card";
 import { CardType } from "./defs";
 
 export class CardCollection {
 
     constructor(
-        public cards: Card[] = []
+        public cards: PlayableCard[] = []
     ){}
 
     getAttack(){
