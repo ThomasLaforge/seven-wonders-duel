@@ -5,7 +5,9 @@ import { Field } from "./Field";
 import { Technology, CardType } from "./defs";
 import { MilitaryField } from "./MilitaryField";
 import { Wonder } from "./Cards/Wonder";
-import { PlayableCard } from "./Card";
+import { AnyPlayableCard } from "./Card";
+import { FieldCard } from './FieldCard';
+import { classBody } from '@babel/types';
 
 export class Game {
 
@@ -14,7 +16,7 @@ export class Game {
         public fields: Field[],
         public technologiesStock: Technology[],
         public militaryField = new MilitaryField(players),
-        public discard: PlayableCard[] = [],
+        public discard: AnyPlayableCard[] = [],
         shufflePlayers = true
     ){
         shufflePlayers && this.shufflePlayers()
@@ -91,20 +93,44 @@ export class Game {
     /**
      * Plays
      */
-    playWonder(w: Wonder, p: Player){
+    playWonder(w: Wonder, p: Player, c: FieldCard){
+        if(!this.isAfordable(w)){
+            throw "wonder not afordable";
+        }
+        this.militaryField.checkPenalties()
+    }
+    
+    playCard(c: FieldCard, p: Player){
+        if(!this.currentField.isPlayable(c)){
+            throw "can't play this wonder";
+        }
         this.militaryField.checkPenalties()
     }
 
-    playCard(c: PlayableCard, p: Player){
-        this.militaryField.checkPenalties()
-    }
-
-    // TODO
-    discardCard(c: PlayableCard, :p: Player){
-        this.discard.push(c)
-        // this.currentField.removeCard(c)
+    discardCard(c: FieldCard, p: Player){
+        this.discard.push(c.card)
+        this.currentField.removeCard(c)
         const nbMoneyToWin = 2 + p.cards.getCardsByType(CardType.Yellow).length
         p.earn(nbMoneyToWin)
+    }
+
+    /**
+     * Cost stuff
+     */
+
+    isAfordable(construction: Wonder | AnyPlayableCard){
+        const isAnyPlayableCard = !(construction instanceof Wonder)
+        if(isAnyPlayableCard && this.isLinked(construction as AnyPlayableCard)){
+            return true
+        }
+
+        const cost = construction.cost
+
+        return true
+    }
+
+    isLinked(c: AnyPlayableCard){
+        return this
     }
 
     /**
@@ -114,4 +140,11 @@ export class Game {
         return this.fields[this.fields.length - 1]
     }
 
+    get currentField(){
+        const field = this.fields.find(f => !f.isEmpty())
+        if(!field){
+            throw "no current field";
+        }
+        return field
+    }
 }
