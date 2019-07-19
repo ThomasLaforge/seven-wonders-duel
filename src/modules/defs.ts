@@ -1,3 +1,12 @@
+import { BlueCardReward } from "./Cards/BlueCard";
+import { GreenCardReward } from "./Cards/GreenCard";
+import { YellowCard, YellowCardReward } from "./Cards/YellowCard";
+import { GuildReward } from "./Cards/GuildCard";
+import { RedCardReward } from "./Cards/RedCard";
+import { WonderReward } from "./Cards/Wonder";
+import { ResourceCardReward } from "./Cards/ResourceCard";
+import { RareResourceCardReward } from "./Cards/RareResourceCard";
+
 // la servante ecarlate
 // the handmaid tale
 export const NB_PLAYER = 2
@@ -30,7 +39,7 @@ export enum CardType {
     Blue = 1, // Monuments
     Green = 2, // Science
     Red = 3, // Armées
-    Purple = 4, // Guildes
+    Guild = 4,
     Resource = 5,  // Ressources,
     RareResource = 6
 }
@@ -67,22 +76,13 @@ export interface Cost {
     resources?: Resource[],
     money?: number
 }
-export interface Reward {
-    money?: number,
-    discardMoney?: number,
-    discardRareResource?: boolean,
-    discardBaseResource?: boolean,
-    military?: number,
-    victoryPoints?: number,
-    resources?: Resource[],
-    discount?: Resource[],
-    scienceBadge?: ScienceBadge,
-    powers?: Power,
-    goldBy?: { amount: number, type: ConstructionType },
-}
 
-export interface GuildReward {
-    VpByMostWonders?: number,
-    VpByMostGold?: { amount: number, each: number},
-    goldAndVpByMost?: { amount: number, types: ConstructionType[] }
-}
+export type Reward = 
+    YellowCardReward | 
+    BlueCardReward | 
+    GreenCardReward |
+    RedCardReward |
+    ResourceCardReward |
+    RareResourceCardReward |
+    GuildReward |
+    WonderReward

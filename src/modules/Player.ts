@@ -1,5 +1,5 @@
 import { DEFAULT_START_MONEY, Technology, MONEY_FOR_EACH_VP, TECHNOLOGIES_MULTIPLICATOR, CardType, NB_SCIENCE_BADGES } from "./defs";
-import { Wonder } from "./Wonder";
+import { Wonder } from "./Cards/Wonder";
 import { CardCollection } from "./CardCollection";
 
 import uniq from 'lodash/uniq'

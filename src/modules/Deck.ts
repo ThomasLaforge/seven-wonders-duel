@@ -1,7 +1,7 @@
 import omit from 'lodash/omit'
 import shuffle from 'lodash/shuffle'
 import { PlayableCard, CardFactory } from './Card';
-import { Wonder } from './Wonder';
+import { Wonder } from './Cards/Wonder';
 
 export abstract class Deck<T> {
     
@@ -20,9 +20,9 @@ let ALL_CARDS = require('../datas/cards.json').map( (jsonCard: any) => {
     return CardFactory.create(jsonCard.type, omit(jsonCard, ['type'])
 })
 
-export class CardDeck extends Deck<PlayableCard> {
+export class CardDeck extends Deck<PlayableCard<any> {
     
-    constructor(cards: PlayableCard[] = ALL_CARDS){
+    constructor(cards: PlayableCard<any>[] = ALL_CARDS){
         super(cards)
     }
 }

@@ -4,7 +4,7 @@ import { Player } from "./Player";
 import { Field } from "./Field";
 import { Technology, CardType } from "./defs";
 import { MilitaryField } from "./MilitaryField";
-import { Wonder } from "./Wonder";
+import { Wonder } from "./Cards/Wonder";
 import { PlayableCard } from "./Card";
 
 export class Game {
