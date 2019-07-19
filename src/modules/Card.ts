@@ -12,6 +12,10 @@ export abstract class SevenWonderCard<TReward> {
         public cost: Cost,
         public reward: TReward
     ){}
+
+    is(c: SevenWonderCard<TReward>){
+      return this.name === c.name
+    }
 }
 
 export abstract class PlayableCard<TReward> extends SevenWonderCard<TReward> {
@@ -27,6 +31,8 @@ export abstract class PlayableCard<TReward> extends SevenWonderCard<TReward> {
     }
 
 }
+
+export abstract class AnyPlayableCard extends PlayableCard<Reward> {}
 
 export class CardFactory {
 
