@@ -6,8 +6,6 @@ import { Technology, CardType } from "./defs";
 import { MilitaryField } from "./MilitaryField";
 import { Wonder } from "./Cards/Wonder";
 import { AnyPlayableCard } from "./Card";
-import { FieldCard } from './FieldCard';
-import { classBody } from '@babel/types';
 
 export class Game {
 
@@ -93,22 +91,22 @@ export class Game {
     /**
      * Plays
      */
-    playWonder(w: Wonder, p: Player, c: FieldCard){
+playWonder(w: Wonder, p: Player, c: AnyPlayableCard){
         if(!this.isAfordable(w)){
             throw "wonder not afordable";
         }
         this.militaryField.checkPenalties()
     }
     
-    playCard(c: FieldCard, p: Player){
+    playCard(c: AnyPlayableCard, p: Player){
         if(!this.currentField.isPlayable(c)){
             throw "can't play this wonder";
         }
         this.militaryField.checkPenalties()
     }
 
-    discardCard(c: FieldCard, p: Player){
-        this.discard.push(c.card)
+    discardCard(c: AnyPlayableCard, p: Player){
+        this.discard.push(c)
         this.currentField.removeCard(c)
         const nbMoneyToWin = 2 + p.cards.getCardsByType(CardType.Yellow).length
         p.earn(nbMoneyToWin)

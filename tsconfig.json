@@ -19,7 +19,9 @@
     "noEmit": true,
     "jsx": "preserve",
     "plugins": [
-      { "transform": "ts-optchain/transform" }
+      {
+        "transform": "ts-optchain/transform"
+      }
     ]
   },
   "include": [

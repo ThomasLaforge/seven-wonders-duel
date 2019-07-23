@@ -53,7 +53,8 @@ export type ConstructionType = CardType | OthersConstructionType
 export enum Technology {
     SevenPoints = 0,
     TechnologiesMultiplicator = 1,
-    TakeTechnologyInReserve = 2
+    TakeTechnologyInReserve = 2,
+    ScienceBadge = 3
 }
 
 export enum ScienceBadge {

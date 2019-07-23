@@ -1,9 +1,9 @@
-import { DEFAULT_START_MONEY, Technology, MONEY_FOR_EACH_VP, TECHNOLOGIES_MULTIPLICATOR, CardType, NB_SCIENCE_BADGES } from "./defs";
+import { DEFAULT_START_MONEY, Technology, MONEY_FOR_EACH_VP, TECHNOLOGIES_MULTIPLICATOR, CardType, NB_SCIENCE_BADGES, ScienceBadge } from "./defs";
 import { Wonder } from "./Cards/Wonder";
 import { CardCollection } from "./CardCollection";
 
 import uniq from 'lodash/uniq'
-import { GreenCard } from "./Card";
+import { GreenCard } from "./Cards/GreenCard";
 
 export class Player {
 
@@ -58,9 +58,9 @@ export class Player {
 
     hasAllScienceBadges(){
         const cardBadges = this.cards.getCardsByType(CardType.Green)
-            .reduce( (all: Technology[], c: GreenCard) => {
-                if(c.reward.technology || c.reward.technology === 0){
-                    return all.concat(c.reward.technology)
+            .reduce( (all: ScienceBadge[], c: GreenCard) => {
+                if(c.reward.scienceBadge || c.reward.scienceBadge === 0){
+                    return all.concat(c.reward.scienceBadge)
                 }
                 else {
                     throw "card without reward technology";

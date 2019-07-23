@@ -39,7 +39,7 @@ export class MilitaryField {
     }
 
     getOpponent(player: Player){
-        return this.players.find(p => p.isNot(player))
+        return this.players.find(p => p.isNot(player)) as Player
     }
 
     playerHasWon(p: Player){
